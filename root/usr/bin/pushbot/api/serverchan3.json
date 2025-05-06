@@ -2,7 +2,7 @@
     "_api": "这是server酱3的推送API",
     "_api": "【ServerChan3】",
     
-    "url": "\"https://${sc3_uid}.push.ft07.com/send/${send_key}.send\"",
+    "url": "${sc3_srv}/",
     "data": "@${tempjsonpath}",
     "content_type": "Content-Type:application/json",
     "str_title_start": "**",
