@@ -47,6 +47,7 @@ a:value("/usr/bin/pushbot/api/feishu.json",translate("飞书"))
 a:value("/usr/bin/pushbot/api/bark.json",translate("Bark"))
 a:value("/usr/bin/pushbot/api/pushplus.json",translate("PushPlus"))
 a:value("/usr/bin/pushbot/api/pushdeer.json",translate("PushDeer"))
+a:value("/usr/bin/pushbot/api/serverchan3.json",translate("ServerChan3"))
 a:value("/usr/bin/pushbot/api/diy.json",translate("自定义推送"))
 
 a=s:taboption("basic", Value,"dd_webhook",translate('Webhook'), translate("钉钉机器人 Webhook").."，只输入access_token=后面的即可<br>调用代码获取<a href='https://developers.dingtalk.com/document/robots/custom-robot-access' target='_blank'>点击这里</a><br><br>")
@@ -111,7 +112,7 @@ a.default=0
 a.rmempty = true
 a:depends("jsonpath","/usr/bin/pushbot/api/bark.json")
 
-a=s:taboption("basic", Value,"ntfy_srv",translate('ServerChan3 Server'), translate("ServerChan3 API地址").."<br>默认为<a href='https://<uid>.push.ft07.com/send/<sendkey>.send' target='_blank'>官方服务器</a><br>如https://123.push.ft07.com/send/aaa.send<br>注意末尾不要带斜杠' target='_blank'>点击这里</a><br>")
+a=s:taboption("basic", Value,"sc3_srv",translate('ServerChan3 Server'), translate("ServerChan3 API地址").."<br>默认为<a href='https://<uid>.push.ft07.com/send/<sendkey>.send' target='_blank'>官方服务器</a><br>如https://123.push.ft07.com/send/aaa.send<br>注意末尾不要带斜杠' target='_blank'>点击这里</a><br>")
 a.rmempty = true
 a.default = "https://<uid>.push.ft07.com/send/<sendkey>.send"
 a:depends("jsonpath","/usr/bin/pushbot/api/serverchan3.json")
